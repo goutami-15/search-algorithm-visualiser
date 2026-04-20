@@ -24,4 +24,4 @@ java src/Main
 ```
 
 ## Status
-🚧 In progress — self-initiated project to build AI engineering skills
+🚧 In progress: self-initiated project to build AI engineering skills
