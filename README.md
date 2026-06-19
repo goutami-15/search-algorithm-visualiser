@@ -1,7 +1,7 @@
 # Search Algorithm Visualiser
 
 An interactive Java / Swing desktop application that visualises how classic pathfinding
-algorithms — **Breadth-First Search (BFS)**, **Depth-First Search (DFS)**, and **A\*** —
+algorithms - **Breadth-First Search (BFS)**, **Depth-First Search (DFS)**, and **A\*** -
 explore a grid and find a route between two points.
 
 Draw your own walls, place a start and an end cell, and watch each algorithm search the
@@ -19,7 +19,7 @@ difference in behaviour between the three algorithms immediately visible.
 |:---:|:---:|:---:|
 | ![BFS run](screenshots/BFS.png) | ![DFS run](screenshots/DFS.png) | ![A* run](screenshots/AStar.png) |
 
-**Legend** — 🟩 Start  ·  🟥 End  ·  ⬛ Wall  ·  🟨 Explored  ·  🟦 Final path
+**Legend** - 🟩 Start  ·  🟥 End  ·  ⬛ Wall  ·  🟨 Explored  ·  🟦 Final path
 
 ---
 
@@ -42,7 +42,7 @@ difference in behaviour between the three algorithms immediately visible.
 | **A\*** | Informed search using `f(n) = g(n) + h(n)`, where `g` is cost-so-far and `h` is the heuristic (Manhattan distance to the goal) | ✅ Yes | Optimal *and* efficient — with an admissible heuristic it typically explores far fewer cells than BFS while still returning the shortest path. |
 
 The visual takeaway: BFS and A\* return paths of the **same length**, DFS returns a longer one,
-and A\* gets there while exploring the **fewest cells** — the practical payoff of using a heuristic.
+and A\* gets there while exploring the **fewest cells** - the practical payoff of using a heuristic.
 
 ---
 
