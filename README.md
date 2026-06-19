@@ -25,11 +25,11 @@ difference in behaviour between the three algorithms immediately visible.
 
 ## Features
 
-- **Interactive grid** — place the start and end cells, then draw and erase walls with the mouse.
-- **Three search algorithms** — BFS, DFS, and A\*, each runnable on the same map for direct comparison.
-- **Live visualisation** — explored cells (yellow) are shown separately from the reconstructed path (blue).
-- **Clear / reset** — wipe the grid and start again at any time.
-- **Colour-coded legend** — every cell state is labelled in the side panel.
+- **Interactive grid** - place the start and end cells, then draw and erase walls with the mouse.
+- **Three search algorithms** - BFS, DFS, and A\*, each runnable on the same map for direct comparison.
+- **Live visualisation** - explored cells (yellow) are shown separately from the reconstructed path (blue).
+- **Clear / reset** - wipe the grid and start again at any time.
+- **Colour-coded legend** - every cell state is labelled in the side panel.
 
 ---
 
@@ -38,7 +38,7 @@ difference in behaviour between the three algorithms immediately visible.
 | Algorithm | Strategy | Shortest path? | Notes |
 |-----------|----------|:--------------:|-------|
 | **BFS** | Explores the grid in layers, expanding all cells at distance *k* before distance *k+1* | ✅ Yes | Optimal on an unweighted grid. Explores broadly. |
-| **DFS** | Follows one branch as deep as possible before backtracking | ❌ No | Finds *a* path, not necessarily the shortest — the longer, winding path is expected behaviour. |
+| **DFS** | Follows one branch as deep as possible before backtracking | ❌ No | Finds *a* path, not necessarily the shortest - the longer, winding path is expected behaviour. |
 | **A\*** | Informed search using `f(n) = g(n) + h(n)`, where `g` is cost-so-far and `h` is the heuristic (Manhattan distance to the goal) | ✅ Yes | Optimal *and* efficient — with an admissible heuristic it typically explores far fewer cells than BFS while still returning the shortest path. |
 
 The visual takeaway: BFS and A\* return paths of the **same length**, DFS returns a longer one,
@@ -50,9 +50,9 @@ and A\* gets there while exploring the **fewest cells** — the practical payoff
 
 The project separates three concerns:
 
-- **Model** — the grid and individual cells (state: empty, wall, start, end, explored, path).
-- **Algorithms** — BFS, DFS, and A\* implemented over the grid, returning the explored set and the reconstructed path.
-- **UI** — a Swing front end that renders the grid, handles mouse input for drawing walls / setting endpoints, and triggers each algorithm from the control panel.
+- **Model** - the grid and individual cells (state: empty, wall, start, end, explored, path).
+- **Algorithms** - BFS, DFS, and A\* implemented over the grid, returning the explored set and the reconstructed path.
+- **UI** - a Swing front end that renders the grid, handles mouse input for drawing walls / setting endpoints, and triggers each algorithm from the control panel.
 
 > *Adjust the class names above to match your actual source files (e.g. `Grid`, `Cell`,
 > `Pathfinder`, `VisualiserFrame`) so the section mirrors your code.*
